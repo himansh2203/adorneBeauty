@@ -7,7 +7,7 @@ import Home from "./pages/home";
 import Navbar from "./components/navbar"; // Import the Navbar component
 import Footer from "./components/footer";
 import Bottom from "./components/bottom";
-import WhatsApp from "./components/whatsapp";
+import WhatsApp from "./components/whatsApp";
 
 function App() {
   return (
