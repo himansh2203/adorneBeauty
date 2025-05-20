@@ -1,0 +1,178 @@
+body.dark {
+  background-color: #111;
+  color: white;
+}
+
+.navbar {
+ background-color: rgba(255, 255, 255, 0.3); /* semi-transparent white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar.dark {
+  background-color: rgba(34, 34, 34, 0.3); /* semi-transparent dark */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #d63384;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar.dark .navbar-links li a {
+  color: white;
+}
+
+.navbar-links li a:hover {
+  color: #d63384;
+}
+
+.book-btn {
+  background-color: #d63384;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.book-btn:hover {
+  background-color: #b82e72;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.navbar.dark .menu-icon {
+  color: white;
+}
+
+/* Dropdown */
+.dropdown-parent {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.navbar.dark .dropdown {
+  background-color: #333;
+}
+
+.dropdown li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown li a {
+  color: #333;
+}
+
+.navbar.dark .dropdown li a {
+  color: white;
+}
+
+.dropdown li:hover {
+  background-color: #f4f4f4;
+}
+
+.navbar.dark .dropdown li:hover {
+  background-color: #444;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: white;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    display: none;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar.dark .navbar-links {
+    background-color: #222;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .dropdown {
+    position: static;
+    box-shadow: none;
+    background: none;
+  }
+}

@@ -1,0 +1,116 @@
+/* Container */
+.contact-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+/* Content Box */
+.contact-content {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1500px;
+}
+
+/* Headings & Paragraphs */
+.contact-content h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.contact-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Icons and Items */
+.contact-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-item .icon {
+  font-size: 1.5rem;
+  color: #b82e72;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #b82e72;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Devices (≤600px) */
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .contact-content {
+    padding: 10px;
+    border-radius: 6px;
+    max-width: 98%;
+  }
+
+  .contact-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .contact-content p,
+  .contact-item {
+    font-size: 0.95rem;
+  }
+
+  .contact-item .icon {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablets (601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .contact-container {
+    padding: 20px;
+  }
+
+  .contact-content {
+    padding: 16px;
+    border-radius: 8px;
+    max-width: 95%;
+  }
+
+  .contact-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact-content p,
+  .contact-item {
+    font-size: 1.05rem;
+  }
+
+  .contact-item .icon {
+    font-size: 1.3rem;
+  }
+}
